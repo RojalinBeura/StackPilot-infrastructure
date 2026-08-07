@@ -132,3 +132,25 @@ module "jenkins" {
   iam_instance_profile = module.iam.jenkins_instance_profile_name
 
 }
+module "lambda" {
+
+  source = "./modules/lambda"
+
+  name_prefix = local.name_prefix
+
+  common_tags = local.common_tags
+
+  lambda_role_arn = module.iam.lambda_role_arn
+
+  database_url = var.database_url
+
+  ses_from_email = var.ses_from_email
+
+}
+module "ses" {
+
+  source = "./modules/ses"
+
+  sender_email = var.ses_from_email
+
+}

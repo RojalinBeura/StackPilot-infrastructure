@@ -81,3 +81,20 @@ variable "key_name" {
 
   type = string
 }
+variable "database_url" {
+
+  description = "PostgreSQL database connection string"
+
+  type = string
+
+  sensitive = true
+
+}
+
+variable "ses_from_email" {
+
+  description = "Verified email address used by Amazon SES"
+
+  type = string
+
+}
