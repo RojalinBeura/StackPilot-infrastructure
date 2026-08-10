@@ -1243,7 +1243,7 @@ Possible future improvements include:
 
 # 👨‍💻 Author
 
-**Biswajeet Sahoo**
+**Rojalin Beura**
 
 ## StockPilot
 
